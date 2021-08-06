@@ -15,7 +15,6 @@ class Solution(object):
                 valid[pair] = 1
                 valid[i] = 1
         
-        print(valid)
         final_max = 0
         curr_max = 0
         for j in valid:
