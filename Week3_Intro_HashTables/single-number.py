@@ -9,7 +9,7 @@ class Solution:
         # Make frequency table
         freq_table = {}
         
-        # Create Tally. Very important trick
+        # Compute frequency. Very important syntax in dictionaries
         for i in nums:
             if i in freq_table:
                 freq_table[i] += 1
