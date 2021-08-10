@@ -39,3 +39,7 @@ For the more ambitious ones, I highly recommend trying <a href="https://en.wikip
 - <a href="https://codeforces.com/">CodeForces</a> - A pretty veteran competitive programming platform relative to Atcoder
 
 To be very honest, there is no _one-size-fits-all_ guide that'll make you wholly proficient in Technical Interviews. In the end, it is about your due diligence in coding regularly. Results will come to fruition if you try.
+
+# :exclamation: Disclaimer
+
+I understand that my Java files are named extremely poorly and clearly does not follow the classic Java Convention. However, I'd like to say that these files are not meant to be compiled and ran locally. Instead, For those who would like to try out my Java solutions, they may copy and paste the code to the Leetcode IDE Instead.

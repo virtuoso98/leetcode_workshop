@@ -2,6 +2,7 @@ import java.util.*;
 
 class Solution {
     public int coinChange(int[] coins, int amount) {
+        /* Unachievable number of coins that can be used */
         int max = amount + 1;
         if (amount == 0) {
             return 0;

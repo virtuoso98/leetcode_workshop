@@ -7,6 +7,7 @@
 
 class Solution:
     def pathSumLocal(self, currSum, currPath, node, acc, targetSum):
+        # Ideal value was not reached
         if not node:
             return
 

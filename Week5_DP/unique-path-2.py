@@ -3,7 +3,7 @@ class Solution:
         if obstacleGrid[0][0] == 1:
             return 0
         
-        obstacleGrid[0][0] = 1;
+        obstacleGrid[0][0] = 1
         nRow = len(obstacleGrid)
         nCol = len(obstacleGrid[0])
         
