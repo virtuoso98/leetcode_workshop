@@ -7,6 +7,11 @@
 
 class Solution:
     def checkSame(self, p: TreeNode, q: TreeNode) -> bool:
+        """
+        Auxxilary Function to check if 2 nodes are the same.
+        """
+
+        # If 
         if not p and not q:
             return True
         
@@ -23,6 +28,7 @@ class Solution:
         queue.append(p)
         queue.append(q)
         while len(queue) != 0:
+            # Not a great way to write. use deque from collections instead.
             nodeP = queue.pop(0)
             nodeQ = queue.pop(0)
             
