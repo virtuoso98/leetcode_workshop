@@ -7,25 +7,29 @@
 
 class Solution {
     public int maxDepth(TreeNode root) {
+        /* If root node undefined, just return 0 */
         if (root == null)
             return 0;
         int maxDepth = 0;
-        List<TreeNode> level = new ArrayList<>();
-        level.add(root);
+        Queue<TreeNode> queue = new LinkedList<>();
+        /* Root as the first element */
+        queue.offer(root);
 
-        while (!(level.isEmpty())) {
+        while (!(queue.isEmpty())) {
+            /* Increase level by 1 when new level traversed */
             maxDepth++;
-            List<TreeNode> nextLevel = new ArrayList<>();
-            for (TreeNode node : level) {
+            /* Find number of nodes in that level */
+            int levelNodes = queue.size();
+            /* Dequeue nodes equivalent to number of nodes in level */
+            for (int i = 0; i < levelNodes; i++) {
+                TreeNode node = queue.poll();
+                /* Append child nodes if defined */
                 if (node.left != null) {
-                    nextLevel.add(node.left);
+                    queue.add(node.left);
                 }
-
                 if (node.right != null) {
-                    nextLevel.add(node.right);
+                    queue.add(node.right);
                 }
-
-                level = nextLevel;
             }
         }
         return maxDepth;

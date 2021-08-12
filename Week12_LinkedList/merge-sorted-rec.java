@@ -6,6 +6,10 @@
 
 class Solution {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        /**
+         * Base cases where there is no merging to be done.
+         * Just return the remainder of the other list
+         */
         if (l1 == null) {
             return l2;
         }

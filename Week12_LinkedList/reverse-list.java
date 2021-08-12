@@ -11,13 +11,19 @@ class Solution {
          * please use a piece of paper and marker to make
          * life easier for you!
          */
+
+        /* Pointer to output Reversed Linked List */
         ListNode prev = null;
+        /* Pointer to current Linked List */
         ListNode curr = head;
 
         while (curr != null) {
+            /* Store temporary reference to next node */
             ListNode cacheNext = curr.next;
+            /* Reversal of reference order occurs here */
             curr.next = prev;
             prev = curr;
+            /* give curr back the reference to next node */
             curr = cacheNext;
         }
 

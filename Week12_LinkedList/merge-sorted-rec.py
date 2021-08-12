@@ -6,6 +6,10 @@
 
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+        """
+        Base cases where there is no merging to be done.
+        Just return the remainder of the other list.
+        """
         if not l1:
             return l2
         

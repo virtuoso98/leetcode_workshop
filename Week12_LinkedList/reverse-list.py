@@ -11,15 +11,18 @@ class Solution:
         please use a piece of paper and marker to make
         life easier for you!
         """
-        # Pointer to output Linked List
+        # Pointer to output Reversed Linked List
         prev = None
         # Pointer to current Linked List
         curr = head
         
         while curr:
+            # Store temporary reference to next node
             cacheNext = curr.next
+            # Reversal of reference order occurs here
             curr.next = prev
             prev = curr
+            # give curr back the reference to next node
             curr = cacheNext
             
         return prev
