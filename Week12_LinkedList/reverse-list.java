@@ -6,6 +6,11 @@
 
 class Solution {
     public ListNode reverseList(ListNode head) {
+        /**
+         * If you do not understand this solution, please 
+         * please use a piece of paper and marker to make
+         * life easier for you!
+         */
         ListNode prev = null;
         ListNode curr = head;
 
