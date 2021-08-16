@@ -1,7 +1,7 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
-        # Complement map to save space
+        # Complement map to map bracket to conjugate
         comp_map = {"(" : ")", "[" : "]", "{" : "}"}
         # Unnecessary actually. Can use keys of comp_map
         open_set = {"(", "[", "{"}
@@ -22,4 +22,5 @@ class Solution:
                 if comp_map[comp] != char:
                     return False
         
+        # No stray left brackets
         return len(stack) == 0

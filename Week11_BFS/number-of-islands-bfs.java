@@ -2,7 +2,10 @@ class Solution {
     private void makeZero(
         char[][] grid, int i, int j, int n, int m
     ) {
-        Queue
+        Queue<int[]> queue = new LinkedList<>();
+        queue.offer(new int[]{i, j});
+        int[][] direction = new int[][]{{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+        
     }
     
     public int numIslands(char[][] grid) {
