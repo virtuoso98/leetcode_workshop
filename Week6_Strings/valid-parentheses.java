@@ -14,7 +14,7 @@ class Solution {
         /* Initialize stack */
         Stack<Character> stk = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
+            char ch = s.charAt(i);~
             /**
              * If character classified as left bracket push it into the stack
              */

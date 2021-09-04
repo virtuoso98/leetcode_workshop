@@ -16,7 +16,7 @@ class Solution:
             if freq[i] > majority_threshold:
                 return i
         
-        # follow up for 2-pass method:
+        # follow up for 2-pass method (w/o lines 15-17):
         # for k, v in freq.items():
             # if v > majority_threshold:
                 # return k
