@@ -8,28 +8,23 @@
 from collections import deque
 
 class Solution:
-    def maxDepth(self, root: Optional[TreeNode]) -> int:
-        # If root node undefined, just return 0
+    def rightSideView(self, root: TreeNode) -> List[int]:
         if not root:
-            return 0
+            return []
         
-        queue = deque()
-        # root as the first element
-        queue.append(root)
-        depth = 0
-        
-        while len(queue) > 0:
-            # Increase level by 1 when new level is traversed
-            depth += 1
-            # Find number of nodes in that level
-            levelNodes = len(queue)
-            # Dequeue nodes equivalent to number of nodes in level
-            for _ in range(levelNodes):
-                # dequeue node
-                node = queue.popleft()
-                # Append child nodes if defined
-                if node.left:
-                    queue.append(node.left)
+        q = deque()
+        q.append(root)
+        right = []
+        while q:
+            width = len(q)
+            for i in range(width):
+                node = q.popleft()
+                if i == 0:
+                    right.append(node.val)
                 if node.right:
-                    queue.append(node.right)
-        return depth
+                    q.append(node.right)
+                if node.left:
+                    q.append(node.left)
+        
+        return right
+        
