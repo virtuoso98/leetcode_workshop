@@ -7,9 +7,6 @@
 
 class Solution:
     def validateHelper(self, node: TreeNode, lowBound, highBound) -> bool:
-        """
-        Recursive function that exploits the fact that 
-        """
         # Empty node does not influence whether BST is Valid
         if not node:
             return True
